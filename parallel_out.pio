@@ -1,0 +1,9 @@
+; Test which just blocking pulls data from fifo and outputs to pins
+
+
+.program parallel_out
+.define PUBLIC OUT_BITCOUNT 8
+    
+.wrap_target
+    out PINS, OUT_BITCOUNT  ; output OUT_BITCOUNT bits to pins
+.wrap

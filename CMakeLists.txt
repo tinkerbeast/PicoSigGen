@@ -23,8 +23,8 @@ add_compile_options(-Wall -Werror
         )
 
 add_executable(pioexp)
-pico_generate_pio_header(pioexp ${CMAKE_CURRENT_LIST_DIR}/parallel_out.pio)
-target_sources(pioexp PRIVATE pio_experiment.c shell.c)
+pico_generate_pio_header(pioexp ${CMAKE_CURRENT_LIST_DIR}/src/parallel_out.pio)
+target_sources(pioexp PRIVATE src/pio_experiment.c src/shell.c)
 target_link_libraries(pioexp PRIVATE
                       pico_stdlib pico_multicore hardware_pio hardware_uart)
 #  pico_enable_stdio_usb(pioexp 1)
